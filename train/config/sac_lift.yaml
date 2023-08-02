@@ -1,0 +1,21 @@
+image_obs: False
+actor_lr: 3.0e-4
+critic_lr: 1.0e-3
+gamma: 0.99
+tau: 0.005
+alpha: 0.1
+auto_alpha: True
+alpha_lr: 3.0e-4
+hidden_sizes: [256, 256, 256]
+n_step: 4
+buffer_size: 1.0e+6
+step_per_epoch: 1.0e+4 # the number of transitions collected per epoch
+step_per_collect: 20   # the number of transitions the collector would collect before the network update
+update_per_step: 0.1   # the number of times the policy is updated per transition after (step_per_collect) transitions are collected
+batch_size: 128
+epoch: 200
+horizon: 300
+camera: 'agentview' 
+height: 128
+width: 128
+encoder_type: 'cnn' # r3m or cnn
